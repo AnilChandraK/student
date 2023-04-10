@@ -34,6 +34,10 @@ public class StudentController{
     public Student addStudent(@RequestBody Student student){
         return SService.addStudent(student);
     }
+    
+    public String addMultipleStudents(@RequestBody ArrayList<Student> getStudents) { //here we are using the ArrayList concept to add the multiple students
+        return SService.addMultipleStudents(getStudents);
+    }
 
     @PutMapping("/students/{studentId}")
     public Student updateStudent(@PathVariable("studentId") int studentId, @RequestBody Student student){
