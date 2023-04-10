@@ -6,6 +6,7 @@ public interface StudentRepository{
     ArrayList<Student> getStudents();
     Student getStudentById(int studentId);
     Student addStudent(Student student);
+    String addMultipleStudents(ArrayList<Student> getStudents);
     Student updateStudent(int studentId, Student student);
     void deleteStudent(int studentId);
 }
